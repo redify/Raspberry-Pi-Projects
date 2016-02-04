@@ -1,3 +1,5 @@
+#!/usr/bin/python2
+
 # Copyright (c) 2014 Adafruit Industries
 # Author: Tony DiCola
 #
@@ -177,8 +179,8 @@ class BME280(object):
         self.t_fine = int(var1 + var2)
         temp = (var1 + var2) / 5120.0
 	
-	#convert to Fahrenheit
-	temp = (temp * 1.8) + 32
+        #convert to Fahrenheit
+        temp = (temp * 1.8) + 32
         return temp
 
     def read_pressure(self):
